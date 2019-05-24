@@ -11,7 +11,8 @@
 	margin: 0 auto;
 	max-width: 350px;
 	padding: 10px;
-	background: #4c433d;
+	background-image: url(images/confederate.png);
+	background-position: center;
 	border-radius: 5px;
 	text-align: center;
 }
@@ -31,8 +32,8 @@
 	border-radius: 5px;
 }
 #ctime .text {
-	margin-top: 5px;
-	color: #b2aca7;
+	margin-top: 10px;
+	color: #991400;
 }
 
 #tpick {
