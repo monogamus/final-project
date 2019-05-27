@@ -16,11 +16,16 @@ var ac = {
     ac.tset.addEventListener("click", ac.set);
     ac.treset = document.getElementById("treset");
     ac.treset.addEventListener("click", ac.reset);
+    ac.tsnooze = document.getElementById("tsnooze");
+    ac.tsnooze.addEventListener("click", ac.snooze);
 
     ac.sound = document.getElementById("alarm-sound");
 
     ac.alarm = null;
-    setInterval(ac.tick, 1000);    
+    setInterval(ac.tick, 1000);
+
+    ac.snooze = null
+    setTimeout(ac.alarm, 5000); 
   },
 
   createSel : function (max) {
@@ -72,6 +77,7 @@ var ac = {
     ac.ths.disabled = true;
     ac.tset.disabled = true;
     ac.treset.disabled = false;
+    ac.tsnooze.disabled = true;
   },
 
   reset : function () {
@@ -82,6 +88,18 @@ var ac = {
     ac.ths.disabled = false;
     ac.tset.disabled = false;
     ac.treset.disabled = true;
+    ac.tsnooze.disabled = false;
+  },
+
+  snooze : function () {
+
+    ac.alarm = ac.thr.value + ac.thm.value + ac.ths.value;
+    ac.thr.disabled = false;
+    ac.thm.disabled = false;
+    ac.ths.disabled = false;
+    ac.tset.disabled = false;
+    ac.treset.disabled = false;
+    ac.tsnooze.disabled = true;
   }
 };
 
