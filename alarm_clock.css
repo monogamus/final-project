@@ -55,16 +55,16 @@
 	font-weight: bold;
 	margin: 20px 0;
 }
-#tset, #treset {
+#tset, #treset, #tsnooze {
 	box-sizing: padding-box;
-	width: 50%;
+	width: 32%;
 	background: #e8b622;
 	color: #fff;
 	padding: 5px;
 	border-radius: 5px;
 	cursor: pointer;
 }
-#tset:disabled, #treset:disabled {
+#tset:disabled, #treset:disabled, #tsnooze:disabled {
 	background: #aaa;
 	color: #888;
 }
